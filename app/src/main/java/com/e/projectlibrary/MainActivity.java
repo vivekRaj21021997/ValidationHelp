@@ -23,14 +23,17 @@ public class MainActivity extends AppCompatActivity {
         context=this;
         btn=findViewById(R.id.btn);
         email=findViewById(R.id.email);
+        HRValidationHelper.setDisableEmojiInTitle(email);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+              /*
                 if(HRValidationHelper.isValidEmail(email.getText().toString())){
                     Toast.makeText(context, "success", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(context,"Not valid email",Toast.LENGTH_SHORT).show();
-                }
+                }*/
 
             }
         });

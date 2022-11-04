@@ -13,5 +13,6 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "ProjectLibrary"
-include ':app',':HRValidationHelper'
+include ':app',':HRValidationHelper',':AndroidPdfSetter'
 include ':HRValidationHelper'
+include ':AndroidPdfSetter'
