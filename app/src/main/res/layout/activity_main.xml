@@ -1,35 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:hint="Enter Email"
+            android:maxLength="20"
+            android:layout_marginStart="30dp"
+            android:paddingEnd="20dp"
+            android:layout_marginEnd="30dp"
+            android:singleLine="true"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="0dp"
+            android:padding="10dp"
+            android:backgroundTint="#aea"
+            android:gravity="center_vertical"
+            android:background="@drawable/rounded_corner"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/postal_code"
+        android:layout_width="0dp"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#aeaeae"
+        android:background="@drawable/rounded_corner"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/address"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <EditText
+        android:id="@+id/emoji_hide"
+        android:layout_width="0dp"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:gravity="center"
+        android:hint="Emoji hide"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#afaaea"
+        android:background="@drawable/rounded_corner"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/postal_code"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <EditText
-        android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corner"
-        android:hint="Enter Email"
-        android:maxLength="20"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:singleLine="true"
-        android:text=""
-        android:layout_marginTop="20dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/btn"
+        android:id="@+id/max_length"
         android:layout_width="0dp"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:gravity="center"
+        android:hint="Max length"
+        android:textColor="@color/white"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#afaacb"
+        android:background="@drawable/rounded_corner"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="ok"
-        app:layout_constraintEnd_toEndOf="@id/email"
-        app:layout_constraintStart_toStartOf="@id/email"
-        app:layout_constraintTop_toBottomOf="@id/email"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/emoji_hide"
+        app:layout_constraintStart_toStartOf="parent"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+            android:id="@+id/btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="ok"
+            app:layout_constraintEnd_toEndOf="@id/email"
+            app:layout_constraintStart_toStartOf="@id/email"
+            app:layout_constraintTop_toBottomOf="@id/email"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
