@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectLibrary">
         <activity
+            android:name=".ActivityVerticalHeightCheck"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityHorizontalList"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

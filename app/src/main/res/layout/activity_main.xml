@@ -1,89 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
         tools:context=".MainActivity">
 
-        <EditText
-            android:id="@+id/email"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_corner"
-            android:hint="Enter Email"
-            android:maxLength="20"
-            android:layout_marginStart="30dp"
-            android:paddingEnd="20dp"
-            android:layout_marginEnd="30dp"
-            android:singleLine="true"
-            android:gravity="center_horizontal"
-            android:text=""
-            android:layout_marginTop="20dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/address"
-            android:layout_width="0dp"
-            android:padding="10dp"
-            android:backgroundTint="#aea"
-            android:gravity="center_vertical"
-            android:background="@drawable/rounded_corner"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-
-    <TextView
-        android:id="@+id/postal_code"
-        android:layout_width="0dp"
-        android:padding="10dp"
-        android:singleLine="true"
-        android:gravity="center"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="#aeaeae"
-        android:background="@drawable/rounded_corner"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/address"
-        app:layout_constraintStart_toStartOf="parent"/>
-    <EditText
-        android:id="@+id/emoji_hide"
-        android:layout_width="0dp"
-        android:padding="10dp"
-        android:singleLine="true"
-        android:gravity="center"
-        android:hint="Emoji hide"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="#afaaea"
-        android:background="@drawable/rounded_corner"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/postal_code"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-    <EditText
-        android:id="@+id/max_length"
-        android:layout_width="0dp"
-        android:padding="10dp"
-        android:singleLine="true"
-        android:gravity="center"
-        android:hint="Max length"
-        android:textColor="@color/white"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="#afaacb"
-        android:background="@drawable/rounded_corner"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/emoji_hide"
-        app:layout_constraintStart_toStartOf="parent"/>
-
-
-    <Button
+        <Button
             android:id="@+id/btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -91,7 +17,170 @@
             android:text="ok"
             app:layout_constraintEnd_toEndOf="@id/email"
             app:layout_constraintStart_toStartOf="@id/email"
-            app:layout_constraintTop_toBottomOf="@id/email"/>
+            app:layout_constraintTop_toBottomOf="@id/email" />
+
+        <EditText
+            android:id="@+id/emoji_hide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#aaeeea"
+            android:gravity="center"
+            android:hint="Emoji hide"
+            android:padding="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:singleLine="true"
+            app:layout_constraintBottom_toTopOf="@id/postal_code"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/decimal_check"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#aaeeea"
+            android:gravity="center"
+            android:hint="Before and After check decimal"
+            android:inputType="numberDecimal"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/max_length"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/max_length"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#aaeeea"
+            android:gravity="center"
+            android:hint="Max length"
+            android:padding="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/emoji_hide"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center_horizontal"
+            android:hint="Enter Email"
+            android:maxLength="20"
+            android:paddingEnd="20dp"
+            android:singleLine="true"
+            android:text=""
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#aaeeea"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/screen_width"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/screen_width"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#aaeeea"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:layout_marginStart="10dp"
+            android:singleLine="true"
+            android:text="Screen Width check"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/decimal_check"
+            app:layout_constraintEnd_toStartOf="@+id/screen_height"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/postal_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#aaeeea"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:singleLine="true"
+            app:layout_constraintBottom_toTopOf="@id/address_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/address_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#aaeeea"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:singleLine="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <TextView
+            android:id="@+id/screen_height"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#aaeeea"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:text="Screen Height check"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@id/decimal_check"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/screen_width"
+            app:layout_constraintTop_toTopOf="@id/screen_width" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
 
